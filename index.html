@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mossphilo International - Minimal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Customizing Tailwind CSS to include your specific colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Defining custom colors based on your request
+                        'olive-green': '#6B8E23', // A classic olive green
+                        'light-sky-blue': '#87CEEB', // A soft light sky blue
+                        'qatar-maroon': '#8A1538', // A deep, rich Qatar Maroon
+                        // Adding lighter/darker shades for variety within the palette
+                        'olive-green-light': '#9ACD32', // Lighter olive green
+                        'light-sky-blue-light': '#B0E0E6', // Lighter light sky blue
+                        'qatar-maroon-dark': '#6A0F2B', // Darker qatar maroon
+                        'qatar-maroon-light': '#B2224A', // Lighter qatar maroon
+                    },
+                    fontFamily: {
+                        // Setting 'Montserrat' as the default font
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Importing the Montserrat font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap');
+
+        /* CSS for the new animation: fade in and slightly scale up */
+        @keyframes fadeInScaleIn {
+            0% {
+                opacity: 0; /* Start completely transparent */
+                transform: scale(0.95); /* Start slightly smaller */
+            }
+            100% {
+                opacity: 1; /* End fully opaque */
+                transform: scale(1); /* End at original size */
+            }
+        }
+
+        .logo-animation {
+            animation: fadeInScaleIn 1.5s ease-out 0.3s forwards; /* Reduced duration to 1.5s */
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-qatar-maroon antialiased min-h-screen flex flex-col">
+
+    <header class="bg-qatar-maroon-dark text-white shadow-lg py-6">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row md:justify-between items-center">
+            <a href="#" class="text-4xl font-black mb-4 md:mb-0 md:text-left text-center rounded-md logo-animation
+                      flex justify-between items-center w-full md:w-auto">
+                <span class="text-light-sky-blue">Mossphilo</span>
+                <span class="text-olive-green ml-2">International</span>
+            </a>
+            <nav class="w-full md:w-auto">
+                <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 items-center md:justify-end">
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        </main>
+
+    <footer class="bg-light-sky-blue text-qatar-maroon py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-base mb-3 text-qatar-maroon logo-animation">&copy; 2025 Mossphilo International Private Limited. All Rights Reserved.</p>
+            <p class="text-base text-qatar-maroon mb-4 logo-animation">Innovating for a Connected Global Future.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-6 mt-4">
+                </div>
+        </div>
+    </footer>
+
+    <script>
+        // The JavaScript for the Gemini API call has also been removed as it was part of the removed section.
+    </script>
+</body>
+</html>
